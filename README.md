@@ -71,13 +71,6 @@ example of a query url: blogs?filtername=filtervalue&f2=fv2
 - Make sure that only the owner of the blogs is able to edit or delete the blog.
 - In case of unauthorized access return an appropirate error message.
 
-## Testing 
-- To test these apis create a new collection in Postman named Project 1 Blogging 
-- Each api should have a new request in this collection
-- Each request in the collection should be rightly named. Eg Create author, Create blog, Get blogs etc
-- Each member of each team should have their tests in running state
-
-
 ## Response
 
 ### Successful Response structure
