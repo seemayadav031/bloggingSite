@@ -9,7 +9,9 @@ const genrateToken = async function (payload) {
 
     } catch (error) {
 
-        res.status(500).send({ status: false, message: error.message });
+        console.error(`Error! creating jwt token ${error.message}`)
+
+        throw error;
 
     }
 }
@@ -26,7 +28,9 @@ const decodeToken = async function (token) {
 
     } catch (error) {
 
-        res.status(500).send({ status: false, messsage: error.message });
+        console.error(`Error! verifying jwt token ${error.message}`)
+
+        return false;
     }
 
 };

@@ -2,7 +2,7 @@ const blogModel = require('../models/blogModel.js');
 const authorModel = require('../models/authorModel.js');
 
 
-const { isValidString, isValidRequestBody, isValidObjectId, isVaildEmail } = require('../validations/validator.js');
+const { isValidString, isValidRequestBody, isValidObjectId } = require('../validations/validator.js');
 
 //****************** API for create blog ******************
 const createBlog = async function (req, res) {
@@ -33,7 +33,7 @@ const createBlog = async function (req, res) {
 
         const blogDetail = await blogModel.create(requestBody);
 
-        res.status(201).send({ status: false, message: 'Blog created successfully', data: blogDetail });
+        res.status(201).send({ status: true, message: 'Blog created successfully', data: blogDetail });
 
 
     } catch (error) {
