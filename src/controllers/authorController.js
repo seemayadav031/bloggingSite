@@ -70,7 +70,7 @@ const login = async function (req, res) {
 
         const token = await genrateToken(payload);   //genrating token
 
-        res.status(200).send({ status: false, message: 'login successfull', data: { ...payload, token } }) //spreading feilds of payload
+        res.status(200).send({ status: true, message: 'login successfull', data: { ...payload, token } }) //spreading feilds of payload
 
 
     } catch (error) {
